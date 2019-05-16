@@ -1,0 +1,40 @@
+<html ng-app="todoApp">
+    <head>
+        <title>Todo List</title>
+        <script src="bower_components/angular/angular.js"></script>
+        <script src="app.js"></script>
+        <script src="bower_components\angular-route\angular-route.js"></script>
+        <script src="bower_components/firebase/firebase.js"></script>
+        <script src="bower_components/angularfire/dist/angularfire.js"></script>
+        <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
+        <link href="bower_components/bootstrap/dist/css/bootstrap.css" rel="stylesheet" type="text/css">
+        <link href="style.css" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Sacramento" rel="stylesheet">
+        <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+        <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+        <!-- Chrome, Firefox OS and Opera -->
+        <meta name="theme-color" content="#330867">
+        <!-- Windows Phone -->
+        <meta name="msapplication-navbutton-color" content="#330867">
+        <!-- iOS Safari -->
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+        <script>
+            // Initialize Firebase
+            var config = {
+               apiKey: "AIzaSyDh0TKDyBSWF4TEWD_nbwMClnfzg2eh7JQ",
+               authDomain: "todos-paqt2.firebaseapp.com",
+               databaseURL: "https://todos-paqt2.firebaseio.com",
+               projectId: "todos-paqt2",
+               storageBucket: "todos-paqt2.appspot.com",
+               messagingSenderId: "665210454412",
+               appId: "1:665210454412:web:5f3431f3bafa5c00"
+            };
+            firebase.initializeApp(config);
+        </script>
+    </head>
+    <body>
+        <ng-view></ng-view>
+    </body>
+</html>
